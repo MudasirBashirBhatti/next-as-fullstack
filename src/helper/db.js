@@ -12,15 +12,6 @@ export const connectDb = async () => {
     });
     console.log("db connected....");
     // console.log(connection);
-
-    // testing and creating new user
-    const user = new User({
-      name: "test name",
-      email: "test email",
-      password: "test password",
-      about: "test about",
-    });
-    await user.save();
   } catch (error) {
     console.log("error_occured...");
     console.log(error);
