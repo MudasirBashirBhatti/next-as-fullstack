@@ -5,7 +5,18 @@ import { NextResponse } from "next/server";
 connectDb();
 
 //GET Request
-export function GET() {}
+export async function GET() {
+  let users = [];
+  try {
+    users = await User.find();
+  } catch (error) {
+    return NextResponse.json(users, {
+      status: 201,
+      message: "failed to get users",
+    });
+  }
+  return NextResponse.json(users);
+}
 
 //PUT Request
 export function PUT() {}
