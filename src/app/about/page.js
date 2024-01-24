@@ -1,6 +1,11 @@
-import React from "react";
+async function TimeOut() {
+  await new Promise((resolve) => {
+    setTimeout(resolve, 3000);
+  });
+}
 
-const page = () => {
+const page = async () => {
+  await TimeOut();
   return <div>about</div>;
 };
 
