@@ -1,0 +1,36 @@
+********** process of database creation in mongodb **********
+
+1. go to cloud.mogodb.com
+
+2. create a new cluster
+
+3. go to network access include ip address (0.0.0/0). any one can add   its ip address also
+
+4. go to database access and write authentication key and password + readWriteAnyDatabase
+
+5. go to "database" and click on connect button
+
+6. click on "compass" from popup
+
+7. copy the connection string from next popup box
+
+8. go to vs code and create a file name ".env" in src/app directory
+
+9. write  (MONGO_DB_URI= paste coppied string here)
+
+10. replace the password that you have created in database access section
+
+
+
+
+********** process of database connectivity **********
+1. go to "src" folder and create a folder named "helper"
+
+2. create a file in "helper" folder named "db.js"
+
+3. install mongose using this command "npm i mongoose"
+
+4. see db.js file for what to write in "db.js"
+
+NOTE:
+always place .env file in main folder not in src or app or any other children folder
