@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 
+//GET Request
 export function GET() {
   const users = [
     {
@@ -14,3 +15,12 @@ export function GET() {
 
   return NextResponse.json(users);
 }
+
+//PUT Request
+export function PUT() {}
+
+//POST Request
+export function POST() {}
+
+//DELETE Request
+export function DELETE() {}
