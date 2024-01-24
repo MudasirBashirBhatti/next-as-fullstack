@@ -1,5 +1,4 @@
 //1. import mongoose
-import { User } from "@/models/users.model";
 import mongoose from "mongoose";
 
 // 2. create async function
