@@ -20,3 +20,19 @@ export async function DELETE(request, { params }) {
     });
   }
 }
+
+export async function GET(request, { params }) {
+  const { userId } = params;
+  try {
+    let singleUser = await User.findById(userId);
+    return NextResponse.json(singleUser, {
+      message: "Get user successfully",
+      success: true,
+    });
+  } catch (error) {
+    return NextResponse.json({
+      message: "Failed to get single user",
+      success: false,
+    });
+  }
+}
