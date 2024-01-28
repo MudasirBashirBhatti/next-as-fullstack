@@ -3,19 +3,21 @@ import mongoose from "mongoose";
 const workSchema = new mongoose.Schema({
   title: {
     type: String,
-    require: true,
+    required: true,
   },
   content: {
     type: String,
-    require: true,
+    required: true,
   },
   createdBy: {
     type: String,
-    require: true,
+    required: true,
   },
   status: {
     type: String,
-    require: true,
+    enum: ["pending", "completed"],
+    default: "pending",
+    required: true,
   },
 });
 

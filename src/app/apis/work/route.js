@@ -13,9 +13,17 @@ export async function POST(request) {
 
   try {
     const createdWork = await work.save();
-    return NextResponse.json(createdWork, {
-      message: "new work created",
-      success: true,
+    return NextResponse.json(createdWork);
+  } catch (error) {
+    return NextResponse.json({
+      message: "failed to create work",
+      success: false,
     });
-  } catch (error) {}
+  }
+}
+
+// get work api
+export async function GET() {
+  const work = await Work.find();
+  return NextResponse.json(work);
 }
