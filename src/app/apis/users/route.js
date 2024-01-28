@@ -34,7 +34,7 @@ export async function POST(request) {
   try {
     // save the object to database
     const createdUser = await user.save();
-    const response = NextResponse.json(user, {
+    const response = NextResponse.json(createdUser, {
       status: 201,
     });
     return response;
