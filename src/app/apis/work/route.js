@@ -3,12 +3,13 @@ import { NextResponse } from "next/server";
 
 // create new work
 export async function POST(request) {
-  const { title, content, createdBy, status } = await request.json();
+  const { title, content, createdBy, status, userId } = await request.json();
   const work = new Work({
     title,
     content,
     createdBy,
     status,
+    userId,
   });
 
   try {

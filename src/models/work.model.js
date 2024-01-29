@@ -19,6 +19,10 @@ const workSchema = new mongoose.Schema({
     default: "pending",
     required: true,
   },
+  userId: {
+    type: mongoose.ObjectId,
+    required: true,
+  },
 });
 
 export const Work = mongoose.models.Work || mongoose.model("Work", workSchema);
