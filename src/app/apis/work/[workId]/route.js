@@ -34,3 +34,20 @@ export async function PUT(request, { params }) {
     });
   }
 }
+
+// delete single user work by his id
+export async function DELETE(request, { params }) {
+  const { workId } = params;
+  try {
+    await Work.deleteOne({
+      _id: workId,
+    });
+    return NextResponse.json("Task deleted");
+  } catch (error) {
+    console.log(error);
+    return NextResponse.json({
+      message: "failed to delete user",
+      success: "false",
+    });
+  }
+}
